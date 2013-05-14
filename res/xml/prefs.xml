@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:summary="@string/nping_desc" android:key="npings" android:title="@string/npings" android:defaultValue="10" /><Preference android:key="pdelay" android:title="@string/pdelay" android:defaultValue="1000"/><Preference android:key="host" android:title="@string/host" android:defaultValue="8.8.8.8"/><CheckBoxPreference android:key="n" android:title="(c) Necromant 2012 :: http://ncrmnt.org/" android:enabled="false"/>
+    
+    
+       
+</PreferenceScreen>

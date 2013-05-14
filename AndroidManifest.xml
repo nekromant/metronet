@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.ncrmnt.metronet"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name=".PingService"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="org.ncrmnt.metronet.PingService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.net.wifi.WifiManager.NETWORK_STATE_CHANGED_ACTION" />
+                <action android:name="android.net.wifi.WifiManager.SCAN_RESULTS_AVAILABLE_ACTION" />
+				<action android:name="org.ncrmnt.metronet.ap_alive" />	
+				<action android:name="org.ncrmnt.metronet.ap_dead" />	
+				<action android:name="org.ncrmnt.metronet.ping_fail" />
+				<action android:name="org.ncrmnt.metronet.ping_ok" />		
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Prefs"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+ 
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

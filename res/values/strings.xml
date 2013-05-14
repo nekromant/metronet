@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">metronet</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="title_activity_main">Necromant\'s MetroNet</string>
+    <string name="status">"Статус: "</string>
+    <string name="idle">MetroNet (c) 2012 Necromant</string>
+    <string name="delmts">Почистить список сетей</string>
+    <string name="shdnexit">Выход</string>
+    <string name="npings">Количество пингов</string>
+    <string name="nping_desc">Если ни один не прошел - точку считаем \"мертвой\"</string>
+    <string name="pdelay">Задержка между пингами</string>
+    <string name="host">Хост или IP для пинга</string>
+
+</resources>
